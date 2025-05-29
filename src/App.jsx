@@ -137,9 +137,8 @@ const Navigation = ({
 }) => {
   const NavigationMenu = ({ mobile = false }) => (
     <nav
-      className={`${
-        mobile ? "flex flex-col space-y-4" : "hidden md:flex space-x-8"
-      }`}
+      className={`${mobile ? "flex flex-col space-y-4" : "hidden md:flex space-x-8"
+        }`}
     >
       {[
         { id: "home", label: "Home" },
@@ -151,11 +150,10 @@ const Navigation = ({
         <button
           key={id}
           onClick={() => scrollToSection(id)}
-          className={`transition-all duration-300 ${
-            activeSection === id
+          className={`transition-all duration-300 ${activeSection === id
               ? "text-blue-600 font-semibold"
               : "text-gray-700 hover:text-blue-600"
-          } ${mobile ? "text-lg py-2" : ""}`}
+            } ${mobile ? "text-lg py-2" : ""}`}
         >
           {label}
         </button>
@@ -206,7 +204,7 @@ const HeroSection = ({ scrollToSection }) => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+      className="relative min-h-screen pt-20 flex items-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
     >
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
@@ -271,7 +269,7 @@ const HeroSection = ({ scrollToSection }) => {
 
               <button
                 onClick={() => scrollToSection("courses")}
-                className="px-8 py-4 border-2 border-white/30 rounded-full font-semibold text-black hover:bg-white/10 transition-all duration-300"
+                className="px-8 py-4 border-2 bg-white border-white/30 rounded-full font-semibold text-black hover:bg-white/10 transition-all duration-300"
               >
                 Xem Khóa Học
               </button>
@@ -405,22 +403,20 @@ const CoursesSection = () => (
           >
             <div className="flex items-center mb-6">
               <div
-                className={`p-3 rounded-2xl ${
-                  index === 0
+                className={`p-3 rounded-2xl ${index === 0
                     ? "bg-blue-100"
                     : index === 1
-                    ? "bg-purple-100"
-                    : "bg-green-100"
-                } group-hover:scale-110 transition-transform duration-300`}
+                      ? "bg-purple-100"
+                      : "bg-green-100"
+                  } group-hover:scale-110 transition-transform duration-300`}
               >
                 <BookOpen
-                  className={`${
-                    index === 0
+                  className={`${index === 0
                       ? "text-blue-600"
                       : index === 1
-                      ? "text-purple-600"
-                      : "text-green-600"
-                  }`}
+                        ? "text-purple-600"
+                        : "text-green-600"
+                    }`}
                   size={24}
                 />
               </div>
@@ -809,7 +805,7 @@ const OlaClassLanding = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-screen overflow-x-hidden">
       <Navigation
         activeSection={activeSection}
         scrollToSection={scrollToSection}
