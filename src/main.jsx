@@ -4,7 +4,7 @@ import './index.css'
 import OlaClassLanding from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+
     <OlaClassLanding />
-  </StrictMode>,
+
 )
